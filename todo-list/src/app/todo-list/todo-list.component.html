@@ -1,0 +1,23 @@
+<div class="todo-list-container">
+    <h2>Todo List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (task of tasks; track $index) {
+            <tr>
+                <td [ngStyle]="{ 'text-decoration': complet.includes(task) ? 'line-through' : 'none' }">{{task}}
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteTask($index)" >Delete</button>
+                    <button class="btn btn-secondary" (click)="completeTask(task)" style="margin-left: 10px;">Complete</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

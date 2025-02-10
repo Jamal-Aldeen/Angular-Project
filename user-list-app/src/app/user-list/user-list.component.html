@@ -1,0 +1,36 @@
+<div class="search-container">
+    <input type="text" placeholder="Search by email"  class="search-input" #email />
+    <button (click)="searchByEmail(email.value)" class="search-button">Search</button>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    @for (user of users; track user.id) {
+    <div class="card h-100 my-card">
+        <img [src]="user.image" class="card-img-top" alt="..." />
+        <div class="card-body">
+            @switch (user.role) {
+            @case ("admin") {
+            <div class="text-center"><span class="badge text-bg-danger">admin</span></div>
+            }
+            @case ("moderator") {
+            <div class="text-center"><span class="badge text-bg-warning">moderator</span></div>
+            }
+            @case ("user") {
+            <div class="text-center"><span class="badge text-bg-success">user</span></div>
+            }
+            }
+           
+            <ul class="list-group list-group-flush" style="background-color: gray;">
+
+                <li class="list-group-item">{{ user.firstName }} {{ user.lastName }} </li>
+                <li class="list-group-item">{{ user.email }} </li>
+                <li class="list-group-item">{{ user.phone }} </li>
+                <li class="list-group-item">{{ user.address.address }} </li>
+
+            </ul>
+        </div>
+    </div>
+
+    }
+</div>

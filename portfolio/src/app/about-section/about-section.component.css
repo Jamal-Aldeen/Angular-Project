@@ -1,0 +1,46 @@
+section.py-5 {
+    background-color: #f8f9fa; /* Light gray background */
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.img-fluid {
+    width: 300px; /* Adjust size */
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #007bff; /* Blue border */
+}
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 25px; /* Rounded button */
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

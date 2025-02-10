@@ -1,0 +1,67 @@
+.card-img-top {
+    width: 40%;
+    height: 40%;
+    border-radius: 10%; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.my-card {
+    background-color: #f8f9fa; /* Lighter background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add soft shadow */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.my-card:hover {
+    transform: translateY(-5px); /* Lift card effect on hover */
+}
+
+.card {
+    width: 100%;
+    max-width: 280px;
+    margin: 15px auto;
+    border-radius: 12px; /* Rounded corners */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    padding: 12px;
+    border: 2px solid #007bff; /* Bootstrap primary color */
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px; /* Set width */
+    margin-right: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+}
+
+.search-button {
+    padding: 12px 18px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Optional: Add spacing between cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

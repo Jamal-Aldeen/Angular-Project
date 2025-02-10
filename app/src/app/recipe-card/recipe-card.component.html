@@ -1,0 +1,49 @@
+<div class="card h-100">
+  <img [src]="recipeItem.image" class="card-img-top" alt="..." />
+  <div class="card-body">
+    @if(recipeItem.prepTimeMinutes <= 10){
+    <span class="badge text-bg-success">Easy to go</span>
+    } @else if(recipeItem.prepTimeMinutes < 15) {
+    <span class="badge text-bg-warning">Need more time</span>
+    } @else {
+    <span class="badge text-bg-danger">Long Time needed</span>
+    }
+    <!-- <h5
+        class="card-title"
+        [ngClass]="
+          recipeItem.reviewCount < 15
+            ? 'review_count_danger_color'
+            : 'text-success'
+        "
+        
+      >
+        {{ recipeItem.name }}
+      </h5> -->
+    <h5
+      class="card-title"
+      [ngStyle]="{ color: recipeItem.reviewCount < 15 ? 'red' : 'green' }"
+    >
+      {{ recipeItem.name }}
+    </h5>
+    <ul class="card-text">
+      @for (ingredient of recipeItem.ingredients; track $index) {
+      <li>{{ ingredient }}</li>
+      }
+    </ul>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-danger" (click)="handleDeleteRecipe(recipeItem.id)">
+      Remove Recipe
+    </button>
+  </div>
+</div>
+
+<!-- SHARE DATA PARENT TO CHILD -->
+<!-- PARENT HTML => <ChildSelector [property]="value"></ChildSelector> -->
+<!-- CHILD TS => @Input() property: any; -->
+
+<!-- SHARE DATA CHILD TO PARENT -->
+<!-- CHILD TS -> @Output() eventInstance= new EventEmitter<dataType>() -->
+<!-- CHILD TS -> this.eventInstance.emit(value) -->
+<!-- PARENT HTML -> <ChildSelector (eventInstance)="function($event)" ></ChildSelector> -->
+<!-- PARENT TS -> function(value){} -->

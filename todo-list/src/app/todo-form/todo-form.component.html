@@ -1,0 +1,8 @@
+<div class="todo-form-container">
+    <h2>Add a New Todo</h2>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter your todo" #task />
+      </div>
+      <button type="submit" class="btn btn-secondary" (click)="add(task.value); task.value=''">Add Todo</button>
+  </div>
+  

@@ -1,0 +1,3 @@
+<app-todo-form (sendToParent)="recevieFromChild($event)"></app-todo-form>
+<app-todo-list [tasks]="list"
+ (sendToParent)="recevieFromChild2($event)"></app-todo-list>
